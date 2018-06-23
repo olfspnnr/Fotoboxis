@@ -23,21 +23,20 @@ export class App extends React.Component<AppProps, AppState> {
       <div className="bg-black w-full h-screen font-sans flex flex-col">
         {!this.state && <div className="text-5xl flex flex-1 justify-center">Lade Daten</div>}
         {this.state && (
-          <div className="h-6 text-lg flex flex-row items-center pl-4  border-grey-darkest border-b z-20">
+          <div className="h-6 text-md flex flex-row items-center pl-4  border-grey-darkest border-b z-20">
             <span className="font-thin text-white text-md">Fotoboxis</span>
           </div>
         )}
         {this.state &&
           (this.state.currentImages === undefined || this.state.loading) && (
             <div className="flex h-4 text-xs mt-6 w-full justify-start font-thin text-white pin-t absolute items-center z-10 px-4 bg-grey-darkest opacity-75">
-              <span>Lade Bilder...</span>
+              <span>Verarbeite 1202 weitere Bilder...</span>
             </div>
           )}
         {this.state &&
           this.state.currentImages && (
             <div className="flex flex-1 justify-center items-center">
               <Carousel
-                autoPlay={true}
                 infiniteLoop={true}
                 showArrows={true}
                 className="flex flex-col justify-center items-center h-full flex-1"

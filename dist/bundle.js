@@ -2649,14 +2649,14 @@ class App extends React.Component {
     render() {
         return (React.createElement("div", { className: "bg-black w-full h-screen font-sans flex flex-col" },
             !this.state && React.createElement("div", { className: "text-5xl flex flex-1 justify-center" }, "Lade Daten"),
-            this.state && (React.createElement("div", { className: "h-6 text-lg flex flex-row items-center pl-4  border-grey-darkest border-b z-20" },
+            this.state && (React.createElement("div", { className: "h-6 text-md flex flex-row items-center pl-4  border-grey-darkest border-b z-20" },
                 React.createElement("span", { className: "font-thin text-white text-md" }, "Fotoboxis"))),
             this.state &&
                 (this.state.currentImages === undefined || this.state.loading) && (React.createElement("div", { className: "flex h-4 text-xs mt-6 w-full justify-start font-thin text-white pin-t absolute items-center z-10 px-4 bg-grey-darkest opacity-75" },
-                React.createElement("span", null, "Lade Bilder..."))),
+                React.createElement("span", null, "Verarbeite 1202 weitere Bilder..."))),
             this.state &&
                 this.state.currentImages && (React.createElement("div", { className: "flex flex-1 justify-center items-center" },
-                React.createElement(react_responsive_carousel_1.Carousel, { autoPlay: true, infiniteLoop: true, showArrows: true, className: "flex flex-col justify-center items-center h-full flex-1", showThumbs: false }, this.state.currentImages.map(pic => (React.createElement("div", { key: pic, className: "h-full flex " },
+                React.createElement(react_responsive_carousel_1.Carousel, { infiniteLoop: true, showArrows: true, className: "flex flex-col justify-center items-center h-full flex-1", showThumbs: false }, this.state.currentImages.map(pic => (React.createElement("div", { key: pic, className: "h-full flex " },
                     React.createElement("img", { key: pic, className: "h-screen", style: { objectFit: "contain" }, src: pic.url, alt: "Kitty" })))))))));
     }
 }
